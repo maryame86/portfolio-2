@@ -1,0 +1,175 @@
+.intro-container {
+    background-image: url('../img/shahadat-rahman-BfrQnKBulYQ-unsplash.jpg');
+    background-size: cover;
+    @include query(mobile) {
+        min-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 100%;
+      
+        overflow-x: hidden;
+    }
+
+    
+
+    .intro-left {
+        min-height: 100vh;
+        background-color: $yellow;
+        
+        @include query(mobile) {
+            min-width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            max-height: 50vh;
+
+        }
+
+        /*
+        .intro-box {
+            color: $dark;
+
+            h1 {
+                font-family: $dm-serif;
+                font-size: 4.75rem;
+            }
+
+            h4 {
+                font-family: $lato;
+                border-bottom: 1px $dark solid;
+                padding-bottom: 20px;
+                font-size: 1.2rem;
+            }
+
+        }
+        */
+    }
+    
+    
+    .intro-right {
+        height: 100vh;
+        
+        z-index: 1;
+        background-color: $dark;
+        font-family: $lato;
+        color: $dark;
+        text-shadow: -2px 2px 4px 
+        rgba(0, 0, 0, 0.5), 
+        2px -2px 0 
+        rgba(38, 36, 36, 0.9);
+        overflow: hidden;
+        @include query(mobile) {
+            min-width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            max-height: 100vh !important;
+
+        }
+       
+
+       
+        p {
+            text-align: justify;
+            z-index: 2;
+            min-width: 120% !important;
+            padding: 0;
+            margin: 0 auto;
+            right: 0;
+            left: 0;
+            color: $dark;
+            text-shadow: none;
+            font-family: monospace;
+            overflow-x: hidden;
+            font-size: 27px;
+
+            @include query(mobile) {  
+                font-size: 20px;
+            }      
+
+        }
+
+        .headline {
+            position: absolute; 
+            left: 0; 
+            right: 0; 
+            margin-left: auto; 
+            margin-right: auto; 
+            margin-top: 7%;
+            width: 75%;
+            height: 75%;
+            z-index: 3;
+            text-shadow: none;
+            @include query(mobile) {
+                margin-top: 35%;
+            }
+
+            .intro-box {
+                z-index: 4;
+                color: $off-white;
+                margin-top: 10%;
+
+                h1 {
+                    font-family: $dm-serif;
+                    font-size: 6rem;
+                    width: 100%;
+                    text-align: center;
+                    text-shadow: 1px 1px 2px black;
+                    @include query(mobile) {
+                        font-size: 5rem;
+                    }
+                }
+    
+                h4 {
+                    font-family: $lato;
+                    border-bottom: 1px $off-white solid;
+                    padding-bottom: 20px;
+                    font-size: 2rem;
+                    width: fit-content;
+                    text-align: center;
+                    padding: 1% 0 2% 0;
+                    margin: auto;
+                    text-shadow: 1px 1px 2px black;
+                    @include query(mobile) {
+                        font-size: 1.6rem;
+                    }
+                }
+
+                ul {
+                    margin: auto;
+                    width: fit-content;
+                    margin-top: 10px;
+                   
+                }
+    
+            }
+        }
+        
+    }
+
+
+    /*
+    h1 {
+        font-family: $dm-serif;
+        font-size: 5.2rem;
+        position: absolute;
+        margin-top: 20%;
+        @include query(mobile) {
+            font-size: 5rem;
+        }
+        
+    }
+
+    h4 {
+        font-family: $lato;
+        font-size: 1.2rem;
+        border-bottom: white 1px solid;
+        padding: 1% 0 3% 0;
+        width: 95%;
+        line-height: 1.4;
+        position: absolute;
+        margin-top: 28%;
+        @include query(mobile) {
+            width: 95%;
+        }
+    }
+    */
+}

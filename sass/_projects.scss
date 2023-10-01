@@ -1,0 +1,199 @@
+
+.projects-container {
+    height: 100vh;
+    background-color: $off-white;
+    color: $dark;
+    @include query(mobile) {   
+        height: fit-content;
+    }
+
+    .projects-left {
+        font-family: $dm-serif;
+        border-right: $side-border-grey;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+
+        @include query(mobile) {
+            width: 100% !important;
+            margin: 10px;
+            padding: 0;
+            border-right: none;
+            border-bottom:  $side-border-grey;
+            max-height: 550px;
+            align-content: flex-start;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            width: fit-content;
+            border-bottom: $border;
+            padding: 0 10% 0% 10%;
+            text-align: center;
+            height: fit-content;
+            line-height: 1.5;
+
+            @include query(mobile) {
+                text-align: center;
+                font-size: 2.8rem;
+                margin: 0 auto !important;
+                
+            }
+            
+        }
+
+        p {
+            font-family: $lato;
+            padding: 0 10% 2% 10%;
+            text-align: justify;
+            font-size: 15px;
+            margin-top: 15%;
+        }
+
+    }
+
+    .projects-right {
+        padding: 3rem 3rem 0 3rem;
+
+        @include query(mobile) {
+            width: 100% !important;
+            padding: 0;
+            display: inline-flex;
+            flex-wrap: wrap;
+        }
+
+        p {
+            font-family: $lato;             
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 5%;
+            text-align: center;
+            @include query(mobile) {
+                width: 100% !important;
+                padding: 0 20px 20px 20px;
+
+            }
+        }
+
+        .row {
+            padding: 0 12% 0 12%;
+
+            @include query(mobile) {
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column !important;
+                width: 50% !important;
+                height: fit-content;
+                margin-bottom: 20%;
+               
+            }
+
+            .tile-container {
+                display: block;
+                box-shadow: $shadow;
+                margin-bottom: 1rem;
+                width: fit-content;
+                padding: 5px;
+
+                @include query(mobile) {
+                    height: fit-content;
+                    margin: 5px 10px 5px 10px !important;
+                }
+    
+                h5 {
+                    font-family: $dm-serif;
+                    max-width: 250px;
+                    font-size: 100%;
+                    
+                   
+                }
+            }
+        }
+
+    }
+
+    
+}
+
+.card {
+   border-radius: 0% !important;
+
+   @include query(mobile) {
+    width: fit-content;
+    }
+ 
+   .card-img {
+    border-radius: 0% !important;
+   }
+    .card-img-overlay {
+        background-color: #000000ad;
+        border-radius: 0% !important;
+    }
+
+    .card-overlay-cust {
+        display: inline-flex;
+        @include custom-overlay(all, ease, 0.5s);
+        opacity: 0;
+        padding: 0;
+     
+        &:hover {
+            opacity: 1;
+        }
+
+
+    }
+}
+
+.project-btn {
+    font-family: $dm-serif;
+    color: white;
+    background-color: #db0909;
+    border: 0;
+    @include query(mobile) {
+        font-size: 14px;
+    }
+}
+
+.project-btn-2 {
+    font-family: $dm-serif;
+    color: white;
+    background-color: black;
+    border: 0;
+}
+
+
+.modal {
+    
+    .modal-dialog {
+
+        .modal-content {
+            border-radius: 0%;
+            color: black;
+
+            .modal-header {
+                border: none;
+
+                .modal-title {
+                    font-family: $dm-serif;
+                }
+
+            }
+            .modal-body {
+                font-family: $lato;
+                text-align: justify;
+
+                .toolbox {
+                    width: fit-content;
+                    border: $border;
+                    color: white;
+                    background-color: black;
+                    font-size: 12px;
+                }
+            }
+            .modal-footer {
+                border: none;
+            }
+        }
+    }
+}
