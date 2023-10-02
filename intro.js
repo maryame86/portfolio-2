@@ -1,4 +1,3 @@
-
 const textContainer = document.getElementById('text-container');
 
 function getRandomColor() {
@@ -13,7 +12,7 @@ function getRandomColor() {
 function changeRandomWordColor() {
   const words = textContainer.textContent.split(' ');
 
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < 70; i++) {
     const randomIndex = Math.floor(Math.random() * words.length);
     const randomWord = words[randomIndex];
 
@@ -23,5 +22,5 @@ function changeRandomWordColor() {
   textContainer.innerHTML = words.join(' ');
 }
 
-// Change color of 6 random words every 3 seconds (3000 milliseconds)
+// Change color of 50 random words every second (1000 milliseconds)
 setInterval(changeRandomWordColor, 1000);
