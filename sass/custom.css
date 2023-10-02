@@ -119,6 +119,7 @@ footer small {
 }
 .intro-container .intro-right {
   height: 100vh;
+  padding: 0;
   z-index: 1;
   background-color: #242424;
   font-family: "Lato", sans-serif;
@@ -134,8 +135,7 @@ footer small {
     max-height: 100vh !important;
   }
 }
-.intro-container .intro-right p {
-  text-align: justify;
+.intro-container .intro-right p, .intro-container .intro-right #text-container {
   z-index: 2;
   min-width: 120% !important;
   padding: 0;
@@ -143,44 +143,47 @@ footer small {
   right: 0;
   left: 0;
   color: #242424;
-  text-shadow: none;
+  position: relative;
   font-family: monospace;
   overflow-x: hidden;
-  font-size: 27px;
+  font-size: 1rem;
+}
+.intro-container .intro-right p span, .intro-container .intro-right #text-container span {
+  transition: 0.9s ease-in-out;
 }
 @media only screen and (max-width: 575.98px) {
-  .intro-container .intro-right p {
-    font-size: 20px;
+  .intro-container .intro-right p, .intro-container .intro-right #text-container {
+    font-size: 14px;
   }
 }
 .intro-container .intro-right .headline {
   position: absolute;
   left: 0;
   right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 7%;
-  width: 75%;
-  height: 75%;
+  margin: auto;
+  width: 100%;
+  height: 100%;
   z-index: 3;
   text-shadow: none;
-}
-@media only screen and (max-width: 575.98px) {
-  .intro-container .intro-right .headline {
-    margin-top: 35%;
-  }
+  mix-blend-mode: screen;
+  display: flex;
+  align-items: center;
 }
 .intro-container .intro-right .headline .intro-box {
   z-index: 4;
-  color: #f4f4f3;
-  margin-top: 10%;
+  color: #242424;
+  margin: 5% auto 0 auto;
+  width: 100%;
+  padding: 5%;
+  background-color: #ffc700;
+  mix-blend-mode: screen;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1882352941);
 }
 .intro-container .intro-right .headline .intro-box h1 {
   font-family: "DM Serif Text", serif;
   font-size: 6rem;
   width: 100%;
   text-align: center;
-  text-shadow: 1px 1px 2px black;
 }
 @media only screen and (max-width: 575.98px) {
   .intro-container .intro-right .headline .intro-box h1 {
@@ -189,7 +192,7 @@ footer small {
 }
 .intro-container .intro-right .headline .intro-box h4 {
   font-family: "Lato", sans-serif;
-  border-bottom: 1px #f4f4f3 solid;
+  border-bottom: 1px #242424 solid;
   padding-bottom: 20px;
   font-size: 2rem;
   width: -moz-fit-content;
@@ -197,7 +200,6 @@ footer small {
   text-align: center;
   padding: 1% 0 2% 0;
   margin: auto;
-  text-shadow: 1px 1px 2px black;
 }
 @media only screen and (max-width: 575.98px) {
   .intro-container .intro-right .headline .intro-box h4 {
@@ -209,6 +211,9 @@ footer small {
   width: -moz-fit-content;
   width: fit-content;
   margin-top: 10px;
+}
+.intro-container .intro-right .headline .intro-box ul li {
+  padding: 0 0.5rem 0 0.5rem;
 }
 
 .about-container {
